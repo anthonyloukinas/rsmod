@@ -60,7 +60,7 @@ object Mining {
                 break
             }
 
-            it.wait(3)
+            it.wait(1)
 
             val level = p.getSkills().getCurrentLevel(Skills.MINING)
             // TODO: Implement pickaxe type interpolation
@@ -204,6 +204,13 @@ object Mining {
         if(p.getSkills().getMaxLevel(Skills.MINING) < ore.level) {
             p.message("You need a Mining level of ${ore.level} to mine this ore.")
             return false
+        }
+
+        if(ore == OreType.DENSE_ESSENCE) {
+            if(p.getSkills().getMaxLevel(Skills.CRAFTING) < 38) {
+                p.message("You need a Crafting level of 38 to mine this ore.")
+                return false
+            }
         }
 
         if(p.inventory.isFull) {

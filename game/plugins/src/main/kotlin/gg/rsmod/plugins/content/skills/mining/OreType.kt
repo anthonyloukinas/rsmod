@@ -18,17 +18,17 @@ enum class OreType(val level: Int, val xp: Double, val ore: Int, val respawnTime
     COAL(level = 30, xp = 50.0, ore = 453, respawnTime = 25..30),
     PURE_ESSENCE(level = 30, xp = 5.0, ore = 7936, respawnTime = 0..0),
     // motherload mine
-
     SANDSTONE1(level = 35, xp = 30.0, ore = 6971, respawnTime = 6..8),
     SANDSTONE2(level = 35, xp = 40.0, ore = 6973, respawnTime = 6..8),
     SANDSTONE3(level = 35, xp = 50.0, ore = 6975, respawnTime = 6..8),
     SANDSTONE4(level = 35, xp = 60.0, ore = 6977, respawnTime = 6..8),
-
-    // dense essence
+    // TODO: Add Favour requirements once that system is implemented.
+    DENSE_ESSENCE(level = 38, xp = 12.0, ore = 13445, respawnTime = 0..0),
     GOLD(level = 40, xp = 65.0, ore = 444, respawnTime = 55..65),
     // gem rocks
-    // volcanic sulpher
-    // lovakengj blast mine
+    // TODO: Add volcanic area effects
+    VOLCANIC_SULPHUR(level = 42, xp = 25.0, ore = 13571, respawnTime = 0..0),
+    // lovakengj blast mines
     GRANITE1(level = 45, xp = 50.0, ore = 6979, respawnTime = 6..8),
     GRANITE2(level = 45, xp = 60.0, ore = 6981, respawnTime = 6..8),
     GRANITE3(level = 45, xp = 75.0, ore = 6983, respawnTime = 6..8),
@@ -43,6 +43,7 @@ enum class OreType(val level: Int, val xp: Double, val ore: Int, val respawnTime
     URT_SALT(level = 72, xp = 5.0, ore = 25597, respawnTime = 5..10),
     // basalt
     RUNITE(level = 85, xp = 125.0, ore = 451, respawnTime = 720..750);
+    // TODO: Figure out how to add Amethyst block_ids
     // amathyst
 
 }
